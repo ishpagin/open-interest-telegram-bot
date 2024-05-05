@@ -1,0 +1,22 @@
+# Application
+dist/
+/node_modules/*
+/build/*
+package-lock.json
+yarn-error.log
+# IDE
+.idea/
+!.idea/codeStyles/codeStyleConfig.xml
+!.idea/codeStyles/Project.xml
+!.idea/externalDependencies.xml
+.vscode/
+# Helm variables directory
+.deploy
+!.deploy/registry_credentials_values.yaml
+!.deploy/elasticsearch_credentials_values.yaml
+!.deploy/ingress_values.yaml
+# Werf files
+werf_report.json
+# CI
+job_token
+DB.sqlite

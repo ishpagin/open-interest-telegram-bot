@@ -1,0 +1,24 @@
+{
+  "name": "open-interest-telegram-bot",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc",
+    "start": "node --experimental-specifier-resolution=node ./dist/src/index.js",
+    "dev": "NODE_ENV=development nodemon --exec ts-node -- src/index.ts",
+    "dev-windows": "nodemon",
+    "test": "jest"
+  },
+  "dependencies": {
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

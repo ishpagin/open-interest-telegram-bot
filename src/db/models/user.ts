@@ -6,6 +6,7 @@ export class User extends Model
     public id!: number;
     public username!: string;
     public chatId!: number;
+    public lastNotification!: number;
     public active!: boolean;
     public settings!: any;
 
@@ -28,6 +29,11 @@ User.init({
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: true,
+    },
+    lastNotification: {
+        type: DataTypes.NUMBER,
+        allowNull: false,
+        defaultValue: 0,
     },
     settings: {
         type: DataTypes.JSON,

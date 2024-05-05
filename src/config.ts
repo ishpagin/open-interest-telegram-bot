@@ -1,4 +1,9 @@
 export const Config = {
     BOT_TOKEN: process.env.BOT_TOKEN,
-    DB_PATH: process.env.DB_PATH ?? './DB.sqlite'
+    DB_PATH: process.env.DB_PATH ?? './DB.sqlite',
+    SYMBOLS_UPDATE_INTERVAL: 1000 * 60 * 15,
+    PRICES_UPDATE_INTERVAL: 10000,
+    OI_UPDATE_INTERVAL: 15000,
+    NOTIFIER_INTERVAL: 1000,
+    MAX_TIMELINE_ENTRIES: 600,
 };

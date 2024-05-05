@@ -12,5 +12,5 @@ export async function start(ctx: Context) {
         console.error(e);
     }
 
-    ctx.reply('You are successfully added to DB.');
+    ctx.reply('Activated.');
 }

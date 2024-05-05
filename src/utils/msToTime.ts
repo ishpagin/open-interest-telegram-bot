@@ -1,29 +1,9 @@
-export function msToTime(duration: number) {
-    let seconds: string | number = Math.floor((
-            duration / 1000
-        ) % 60),
-        minutes: string | number = Math.floor((
-            duration /
-            (
-                1000 * 60
-            )
-        ) % 60),
-        hours: string | number = Math.floor((
-            duration /
-            (
-                1000 * 60 * 60
-            )
-        ) % 24);
+export function msToTime(duration: number): string {
+    const addLeadingZero = (n: number): string => n < 10 ? '0' + n : '' + n;
 
-    hours = (
-        hours < 10
-    ) ? '0' + hours : hours;
-    minutes = (
-        minutes < 10
-    ) ? '0' + minutes : minutes;
-    seconds = (
-        seconds < 10
-    ) ? '0' + seconds : seconds;
+    const seconds = addLeadingZero(Math.floor((duration / 1000) % 60));
+    const minutes = addLeadingZero(Math.floor((duration / (1000 * 60)) % 60));
+    const hours = addLeadingZero(Math.floor((duration / (1000 * 60 * 60)) % 24));
 
-    return hours + ':' + minutes + ':' + seconds;
+    return `${hours}:${minutes}:${seconds}`;
 }

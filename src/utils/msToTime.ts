@@ -1,8 +1,5 @@
 export function msToTime(duration: number) {
-    let milliseconds = Math.floor((
-            duration % 1000
-        ) / 100),
-        seconds: string | number = Math.floor((
+    let seconds: string | number = Math.floor((
             duration / 1000
         ) % 60),
         minutes: string | number = Math.floor((
@@ -28,5 +25,5 @@ export function msToTime(duration: number) {
         seconds < 10
     ) ? '0' + seconds : seconds;
 
-    return hours + ':' + minutes + ':' + seconds + '.' + milliseconds;
+    return hours + ':' + minutes + ':' + seconds;
 }
